@@ -8,11 +8,23 @@ void sideBar(){
 
     //UPPER BAR
     glBegin(GL_POLYGON);
+    glVertex2f(0.9,0.9);
+    glVertex2f(0.9,0.6);
+    glVertex2f(-0.9,0.6);
+    glVertex2f(-0.9,0.9);
+    glEnd();
+    //white line under upper bar
+    glBegin(GL_LINE_LOOP);
     glVertex2f(1,1);
     glVertex2f(1,0.7);
     glVertex2f(-1,0.7);
     glVertex2f(-1,1);
     glEnd();
+
+
+
+
+
 
     //LOWER BAR
     glColor3f(1.0,1.0,0.0);
@@ -42,6 +54,8 @@ void sideBar(){
     glEnd();
     
 
+    // MAIN PLAY GROUND
+
     glFlush();
 }
 
@@ -62,7 +76,9 @@ int main(int argc, char* argv[])
     glutInitWindowSize(1200, 900);
     glutInitWindowPosition(50,50);
     glutCreateWindow("Play Ground");
-    glClearColor(1.0,1.0,1.0,0.0);
+
+    //set the background color
+    glClearColor(0.7,0.2,0.4,0.0);
     gluOrtho2D(-1.0,1.0,-1.0,1.0);
     //Register Display Function
     glutDisplayFunc(display);
