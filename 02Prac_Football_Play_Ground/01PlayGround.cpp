@@ -20,7 +20,8 @@ void sideBar(){
     glVertex2f(-1,0.7);
     glVertex2f(-1,1);
     glEnd();
-
+// thk hy kud ko ham badlty hn
+// sukria mashvrat ka chlty hn
 
 
 
