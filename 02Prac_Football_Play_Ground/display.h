@@ -20,6 +20,6 @@ class Display{
     void drawCenterCircleLine();
     void rMainGround();
     void lMainGround();
-}
+};
 
 #endif 

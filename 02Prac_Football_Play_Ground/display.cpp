@@ -1,10 +1,16 @@
 
+#include "display.h"
 #include <GL/glut.h>
 #include <GL/gl.h>
 #include <math.h>
 
+// constructor
+Display::Display(){
+
+}
+
 // UPPER SIDE CODE FUNCTIONS 
-void drawInnerMainBorder(){
+void Display::drawInnerMainBorder(){
     glColor3f(1.0, 1.0, 1.0);
     glLineWidth(10.0);
     glBegin(GL_LINE_LOOP);
@@ -14,7 +20,7 @@ void drawInnerMainBorder(){
     glVertex2f(0.99,0.7);
     glEnd();
 }
-void drawLiteBlueOuter(){
+void Display::drawLiteBlueOuter(){
     glColor3f(0.7, 0.9, 1.0);
     glBegin(GL_QUADS);
     glVertex2f(0.99,0.99);
@@ -23,7 +29,7 @@ void drawLiteBlueOuter(){
     glVertex2f(0.99,0.7);
     glEnd();
 }
-void drawOuterMainBorder(){
+void Display::drawOuterMainBorder(){
     glColor3f(0.62, 0.62, 0.57);
     glLineWidth(3.0);
     glBegin(GL_LINE_LOOP);
@@ -33,7 +39,7 @@ void drawOuterMainBorder(){
     glVertex2f(0.92,0.77);
     glEnd();
 }
-void drawLiteBlueInner(){
+void Display::drawLiteBlueInner(){
     glColor3f(0.7, 0.9, 1.0);
     glLineWidth(10.0);
     glBegin(GL_QUADS);
@@ -45,7 +51,7 @@ void drawLiteBlueInner(){
 }
 
 // lower side of the window
-void LdrawInnerMainBorder(){
+void Display::LdrawInnerMainBorder(){
     glColor3f(1.0, 1.0, 1.0);
     glLineWidth(10.0);
     glBegin(GL_LINE_LOOP);
@@ -55,7 +61,7 @@ void LdrawInnerMainBorder(){
     glVertex2f(0.99,-0.7);
     glEnd();
 }
-void LdrawLiteRedOuter(){
+void Display::LdrawLiteRedOuter(){
     glColor3f(0.9, 0.23, 0.15);
     glBegin(GL_QUADS);
     glVertex2f(0.99,-0.99);
@@ -64,7 +70,7 @@ void LdrawLiteRedOuter(){
     glVertex2f(0.99,-0.7);
     glEnd();
 }
-void LdrawOuterMainBorder(){
+void Display::LdrawOuterMainBorder(){
     glColor3f(0.62, 0.62, 0.57);
     glLineWidth(3.0);
     glBegin(GL_LINE_LOOP);
@@ -74,7 +80,7 @@ void LdrawOuterMainBorder(){
     glVertex2f(0.92,-0.77);
     glEnd();
 }
-void LdrawLiteRedInner(){
+void Display::LdrawLiteRedInner(){
     glColor3f(0.9, 0.23, 0.15);
     glLineWidth(10.0);
     glBegin(GL_QUADS);
@@ -87,7 +93,7 @@ void LdrawLiteRedInner(){
 
 
 // RIGHT SIDE CODE 
-void drawRightSideOuter(){
+void Display::drawRightSideOuter(){
     glColor3f(1.0, 1.0, 1.0);
     glLineWidth(10.0);
     glBegin(GL_LINE_LOOP);
@@ -109,7 +115,7 @@ void drawRightSideOuter(){
 
 // LEFT SIDE 
 
-void drawLeftSideOuter(){
+void Display::drawLeftSideOuter(){
     glColor3f(1.0, 1.0, 1.0);
     glLineWidth(10.0);
     glBegin(GL_LINE_LOOP);
@@ -131,7 +137,7 @@ void drawLeftSideOuter(){
 
 
 // draw inner zameen in dark color
-void drawInnerZameen(){
+void Display::drawInnerZameen(){
     glColor3f(0.5, 0.4, 0.3);
     glBegin(GL_QUADS);
     glVertex2f(0.7, 0.7);
@@ -142,7 +148,7 @@ void drawInnerZameen(){
 }
 
 // draw green land
-void drawGreenLand(){
+void Display::drawGreenLand(){
     // draw black border on whole
     glColor3f(0, 0, 0);
     glLineWidth(5.0);
@@ -163,7 +169,7 @@ void drawGreenLand(){
 }
 
 // draw central line and circle 
-void drawCenterCircleLine(){
+void Display::drawCenterCircleLine(){
     glColor3f(0, 0, 0);
     glLineWidth(3.0);
     glBegin(GL_LINE_LOOP);
@@ -204,7 +210,7 @@ void drawCenterCircleLine(){
 // INNER SIDES OF THE GROUND
 
 // right side of the gorund
-void rMainGround(){
+void Display::rMainGround(){
 
     // draw the black line on goal
     glColor3f(0, 0, 0);
@@ -253,7 +259,7 @@ void rMainGround(){
     glEnd();
 }
 // left side of the gorund
-void lMainGround(){
+void Display::lMainGround(){
     glColor3f(0, 0, 0);
     glLineWidth(2);
     glBegin(GL_LINE_LOOP);
@@ -300,7 +306,9 @@ void lMainGround(){
     }
     glEnd();
 }
-void display(){
+
+// display function
+void Display::display(){
     glClear(GL_COLOR_BUFFER_BIT);
     // draw upper side
     drawInnerMainBorder();

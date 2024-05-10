@@ -2,6 +2,11 @@
 #include <GL/gl.h>
 #include "display.h"
 
+// write display function calls
+void display(){
+    Display obj;
+    obj.display();
+}
 int main(int argc, char* argv[])
 {
     // Initialize glut function 
