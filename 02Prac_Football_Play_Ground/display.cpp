@@ -244,17 +244,24 @@ void Display::rMainGround(){
     }
     glEnd();
 
-    // draw the half circle on the start of the black line in the right side 
+    // draw the half circle on the start of the black line in the right side (rarc) 
     glColor3f(0, 0, 0);
     glLineWidth(3);
     glBegin(GL_LINE_LOOP);
-    for (int i = 0; i < 50; i++) {
-        float theta = 2.0f * 3.1415926f * float(i) / float(100);  
-        float x = 10.0 * cosf(theta);  
-        float y = 10.0 * sinf(theta);  
-        x = x/ 100.0;
-        y = y/100.0;
-        glVertex2f(x+0.3, y+0.2);  
+    float x1, y1 , x2, y2, teta;
+    float radius = 0.11;
+    x1 = 0.3;
+    y1 = 0.01;
+    for (teta = 0.0; teta<3.13f; teta+=0.1) {
+        // float theta = 2.0f * 3.1415926f * float(i) / float(100);  
+        // float x = 10.0 * cosf(theta);  
+        // float y = 10.0 * sinf(theta);  
+        // x = x/ 100.0;
+        // y = y/100.0;
+        x2 = x1 - sin(teta) * radius;
+        y2 = y1 + cos(teta) * radius;
+        glVertex2f(x2, y2);  
+        // glVertex2f(x+0.3, y+0.2);  
     }
     glEnd();
 }
@@ -292,17 +299,24 @@ void Display::lMainGround(){
     glEnd();
 
 
-    // draw the half circle on the start of the black line in the left side side 
+    // draw the half circle on the start of the black line in the right side (rarc) 
     glColor3f(0, 0, 0);
     glLineWidth(3);
     glBegin(GL_LINE_LOOP);
-    for (int i = 0; i < 50; i++) {
-        float theta = 2.0f * 3.1415926f * float(i) / float(100);  
-        float x = 10.0 * cosf(theta);  
-        float y = 10.0 * sinf(theta);  
-        x = x/ 100.0;
-        y = y/100.0;
-        glVertex2f(x-0.3, y+0.2);  
+    float x1, y1 , x2, y2, teta;
+    float radius = 0.11;
+    x1 = -0.3;
+    y1 = -0.01;
+    for (teta = 0.0; teta<3.18f; teta+=0.1) {
+        // float theta = 2.0f * 3.1415926f * float(i) / float(100);  
+        // float x = 10.0 * cosf(theta);  
+        // float y = 10.0 * sinf(theta);  
+        // x = x/ 100.0;
+        // y = y/100.0;
+        x2 = x1 + sin(teta) * radius;
+        y2 = y1 + cos(teta) * radius;
+        glVertex2f(x2, y2);  
+        // glVertex2f(x+0.3, y+0.2);  
     }
     glEnd();
 }

@@ -1,3 +1,4 @@
+// by mrsaqibale
 #include <GL/glut.h>
 #include <GL/gl.h>
 #include "display.h"
@@ -30,3 +31,5 @@ int main(int argc, char* argv[])
     //return
     return 0;
 }
+// g++ -o outputs/final 01PlayGround.cpp  display.cpp -lGL -lGLU -lglut
+
