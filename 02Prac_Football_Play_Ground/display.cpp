@@ -351,11 +351,8 @@ void Display::display(){
     // draw centeral line and circle function
     drawCenterCircleLine();
 
-
     // inner main ground
     rMainGround();
     lMainGround();
     glFlush();
-
-    
 }
